@@ -8,6 +8,10 @@ io.on('connection', (client) => {
 		client.broadcast.emit('slide', data);
 	});
 
+	client.on('lightbox', (data) => {
+		client.broadcast.emit('lightbox', data);
+	})
+
 	client.on('disconnect', () => {});
 });
 
