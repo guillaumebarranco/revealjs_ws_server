@@ -10,6 +10,10 @@ io.on('connection', (client) => {
 
 	client.on('lightbox', (data) => {
 		client.broadcast.emit('lightbox', data);
+	});
+
+	client.on('close_lightbox', () => {
+		client.broadcast.emit('close_lightbox');
 	})
 
 	client.on('disconnect', () => {});
